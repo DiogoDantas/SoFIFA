@@ -20,7 +20,7 @@ class SofifaSpider(scrapy.Spider):
 			player_link = player.xpath('a/@href').re(r'/player/\w+')
 			if len(player_link)	> 0:
 				yield {
-					'player_url': player_link
+					'player_url': player_link[0]
 				}
 
 		next_page = response.xpath('.//a[@class="pjax btn"]/@href').extract()

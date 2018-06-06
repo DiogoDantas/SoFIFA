@@ -14,6 +14,8 @@ BOT_NAME = 'sofifa'
 SPIDER_MODULES = ['sofifa.spiders']
 NEWSPIDER_MODULE = 'sofifa.spiders'
 
+DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'sofifa (+http://www.yourdomain.com)'
@@ -63,6 +65,9 @@ ROBOTSTXT_OBEY = True
 #}
 
 # Configure item pipelines
+ITEM_PIPELINES = {
+    'sofifa.pipelines.JsonPipeline': 300,
+}
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
 #    'sofifa.pipelines.SofifaPipeline': 300,
