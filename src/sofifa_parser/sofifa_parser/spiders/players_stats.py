@@ -102,9 +102,7 @@ class SofifaSpider(scrapy.Spider):
 
             player_info_dict.update(player_skills_dict)
 
-            yield {
-                'player_info': player_info_dict
-            }
+            yield player_info_dict
 
             if self.player_count < len(self.players):
                 next_page_url = 'https://sofifa.com' + self.players[self.player_count]['player_url'] + '?units=mks'
