@@ -63,7 +63,7 @@ class SofifaSpider(scrapy.Spider):
             extra["Skill Moves"] = int(extra["Skill Moves"])
 
             # sofifa operations
-            player_operations = {k:v for k, v in zip(player_operation, player_operation_values)}
+            player_operations = {k:int(v) for k, v in zip(player_operation, player_operation_values)}
 
             #skills
             attacking = {k.replace(' ', ''):int(v) for k, v in zip(player_skills[:5], player_skills_values[:5])}
