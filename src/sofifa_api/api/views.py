@@ -18,4 +18,22 @@ class PlayerViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = Player.objects.all()
+
+        player_name = self.request.query_params.get('name', None)
+        player_age = self.request.query_params.get('age', None )
+        player_potential = self.request.query_params.get('potential', None)
+        player_overall = self.request.query_params.get('overall_rating', None)
+        player_positions = self.request.query_params.get('positions', None)
+
+        if player_name is not None:
+            queryset = queryset.filter(name__icontains = player_name)
+        if player_age is not None:
+            queryset = queryset.filter(age = player_age)
+        if player_potential is not None:
+            queryset = queryset.filter(potential = player_potential)
+        if player_overall is not None:
+            queryset = queryset.filter(overall_rating = player_overall)
+        if player_positions is not None:
+            queryset = queryset.filter(positions__icontains = player_positions)
+
         return queryset
