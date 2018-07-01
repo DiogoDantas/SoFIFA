@@ -1,8 +1,7 @@
 # MLFIFA
-> This repo helps addicted FIFA players (like us) build a _Dream Team_ in Manager mode on the [SoFIFA](https://sofifa.com) platform.
+**Coming soon:** *We are currently developing a website to __compare players__ using __statistical visualization__.*
 
-**Coming soon:**
-*We are currently developing a website to __compare players__ using __statistical visualization__.*
+This repo helps addicted FIFA players (like us) build a _Dream Team_ in Manager mode using player statistics from the [SoFIFA](https://sofifa.com) platform.
 
 ---
 ## Repo Contents
