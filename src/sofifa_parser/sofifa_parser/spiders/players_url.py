@@ -23,7 +23,7 @@ class SofifaSpider(scrapy.Spider):
 					'player_url': player_link[0]
 				}
 
-		next_page = response.xpath('.//a[@class="pjax btn"]/@href').extract()
+		next_page = response.xpath('.//a[@class="bp3-button pjax"]/@href').extract()
 		if next_page:
 			if len(next_page) == 1:
 				next_href = next_page[0]
